@@ -1,49 +1,58 @@
 # ML Experiment Tracker
 
-This project is a web-based ML Experiment Tracker that integrates with MLflow for experiment tracking and visualization.
+This project is a web-based UI for tracking machine learning experiments, integrated with MLflow.
 
-## Setup
+## Getting Started
 
-1. Clone the repository
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm (v6 or later)
+- MLflow server running (typically on port 5000)
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/ml-experiment-tracker.git
+   cd ml-experiment-tracker
+   ```
+
 2. Install dependencies:
    ```
    npm install
    ```
-3. Start the development server:
+
+### Running the Application
+
+1. Start the development server:
    ```
    npm run dev
    ```
-4. Open your browser and navigate to `http://localhost:5173` to view the application
 
-## MLflow Integration
+2. Open your browser and navigate to `http://localhost:5173` to view the application.
 
-This application integrates with MLflow for experiment tracking. To use MLflow:
+### Building for Production
 
-1. Install MLflow:
-   ```
-   pip install mlflow
-   ```
-2. Start the MLflow server:
-   ```
-   mlflow ui
-   ```
-3. The MLflow UI will be available at `http://localhost:5000`
+To create a production build:
 
-## Running Experiments
+```
+npm run build
+```
 
-To run an example experiment:
+The built files will be in the `dist` directory.
 
-1. Ensure MLflow server is running
-2. Run the Python script:
-   ```
-   python src/mlflow_integration.py
-   ```
-3. View the results in the MLflow UI at `http://localhost:5000`
+## Features
 
-## Viewing Experiments in the Web UI
+- View and manage ML experiments
+- Track model performance metrics
+- Compare different experiment runs
+- Integrate with MLflow for experiment logging and model registry
 
-1. Start the development server (`npm run dev`)
-2. Open your browser to `http://localhost:5173`
-3. Navigate to the MLFlow Integration or Unified Dashboard pages to view experiment results
+## Contributing
 
-Note: The web application expects MLflow to be running on `localhost:5000`. If you've configured MLflow to run on a different port, update the fetch URLs in `src/pages/MLFlowIntegration.jsx` and `src/pages/UnifiedDashboard.jsx` accordingly.
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
