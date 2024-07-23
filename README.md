@@ -1,62 +1,49 @@
-# ML Experiment Tracking UI with MLFlow Integration
+# ML Experiment Tracker
 
-This project demonstrates how to integrate MLFlow with a React-based ML experiment tracking UI. It allows you to track different ML models, datasets, experiments, and results, including metrics such as accuracy, latency, perplexity, and size.
+This project is a web-based ML Experiment Tracker that integrates with MLflow for experiment tracking and visualization.
 
-## Setup Instructions
+## Setup
 
-### Local Setup
-
-1. Install dependencies:
+1. Clone the repository
+2. Install dependencies:
    ```
    npm install
-   pip install mlflow scikit-learn numpy
    ```
-
-2. Start the MLFlow server:
-   ```
-   mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root ./mlflow-artifacts --host 0.0.0.0
-   ```
-
-3. Run the ML experiment:
-   ```
-   python src/mlflow_integration.py
-   ```
-
-4. Start the React development server:
+3. Start the development server:
    ```
    npm run dev
    ```
+4. Open your browser and navigate to `http://localhost:5173` to view the application
 
-5. Open your browser and navigate to `http://localhost:5173` to view the UI.
+## MLflow Integration
 
-### Cloud Setup (AWS Example)
+This application integrates with MLflow for experiment tracking. To use MLflow:
 
-1. Set up an EC2 instance with Python and Node.js installed.
-
-2. Install dependencies as in the local setup.
-
-3. Configure AWS CLI and set up appropriate IAM roles for S3 access.
-
-4. Start the MLFlow server with S3 backend:
+1. Install MLflow:
    ```
-   mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root s3://your-bucket-name/mlflow-artifacts --host 0.0.0.0
+   pip install mlflow
    ```
+2. Start the MLflow server:
+   ```
+   mlflow ui
+   ```
+3. The MLflow UI will be available at `http://localhost:5000`
 
-5. Update the `mlflow.set_tracking_uri()` in `src/mlflow_integration.py` to point to your EC2 instance's public IP or domain.
+## Running Experiments
 
-6. Run the ML experiment and start the React development server as in the local setup.
+To run an example experiment:
 
-## Using the MLFlow Integration
+1. Ensure MLflow server is running
+2. Run the Python script:
+   ```
+   python src/mlflow_integration.py
+   ```
+3. View the results in the MLflow UI at `http://localhost:5000`
 
-1. Navigate to the "MLFlow Integration" page in the UI.
-2. View the list of experiments and recent runs.
-3. Click on the eye icon to view details of an experiment.
-4. Click on the chart icon to view metrics for a specific run.
+## Viewing Experiments in the Web UI
 
-## Troubleshooting
+1. Start the development server (`npm run dev`)
+2. Open your browser to `http://localhost:5173`
+3. Navigate to the MLFlow Integration or Unified Dashboard pages to view experiment results
 
-- If you encounter CORS issues, ensure your MLFlow server is configured to allow cross-origin requests.
-- Make sure the MLFlow server is running before starting the React application.
-- Check that the MLFlow tracking URI in `src/mlflow_integration.py` matches your server configuration.
-
-For more information, refer to the [MLFlow documentation](https://www.mlflow.org/docs/latest/index.html).
+Note: The web application expects MLflow to be running on `localhost:5000`. If you've configured MLflow to run on a different port, update the fetch URLs in `src/pages/MLFlowIntegration.jsx` and `src/pages/UnifiedDashboard.jsx` accordingly.
