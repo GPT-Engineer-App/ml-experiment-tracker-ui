@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Database, FileText, Beaker, BarChart2 } from "lucide-react";
 
 const DashboardCard = ({ title, value, icon }) => (
