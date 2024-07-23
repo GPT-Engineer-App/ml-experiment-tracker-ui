@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Database, FileText, Flask, BarChart2 } from "lucide-react";
+import { Database, FileText, Beaker, BarChart2 } from "lucide-react";
 
 const DashboardCard = ({ title, value, icon }) => (
   <Card>
@@ -18,7 +18,7 @@ const Index = () => {
   const dashboardData = [
     { title: "Total Models", value: 10, icon: <Database className="h-4 w-4 text-muted-foreground" /> },
     { title: "Total Datasets", value: 5, icon: <FileText className="h-4 w-4 text-muted-foreground" /> },
-    { title: "Total Experiments", value: 25, icon: <Flask className="h-4 w-4 text-muted-foreground" /> },
+    { title: "Total Experiments", value: 25, icon: <Beaker className="h-4 w-4 text-muted-foreground" /> },
     { title: "Total Results", value: 100, icon: <BarChart2 className="h-4 w-4 text-muted-foreground" /> },
   ];
 

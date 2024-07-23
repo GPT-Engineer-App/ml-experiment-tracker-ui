@@ -1,4 +1,4 @@
-import { Home, Database, Flask, BarChart2, FileText } from "lucide-react";
+import { Home, Database, Beaker, BarChart2, FileText } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import Models from "./pages/Models.jsx";
 import Datasets from "./pages/Datasets.jsx";
@@ -27,7 +27,7 @@ export const navItems = [
   {
     title: "Experiments",
     to: "/experiments",
-    icon: <Flask className="h-4 w-4" />,
+    icon: <Beaker className="h-4 w-4" />,
     page: <Experiments />,
   },
   {
