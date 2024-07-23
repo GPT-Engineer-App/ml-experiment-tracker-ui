@@ -3,19 +3,22 @@ import { addDays, format } from "date-fns"
 import { Calendar as CalendarIcon } from "lucide-react"
 import { DateRange } from "react-day-picker"
 
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
-import { Calendar } from "@/components/ui/calendar"
+import { cn } from "../../lib/utils"
+import { Button } from "./button"
+import { Calendar } from "./calendar"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "./popover"
 
-export function DatePickerWithRange({ className, setDateRange }) {
+export function DatePickerWithRange({
+  className,
+  setDateRange,
+}) {
   const [date, setDate] = React.useState({
-    from: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
-    to: new Date(),
+    from: new Date(2023, 0, 20),
+    to: addDays(new Date(2023, 0, 20), 20),
   })
 
   React.useEffect(() => {
