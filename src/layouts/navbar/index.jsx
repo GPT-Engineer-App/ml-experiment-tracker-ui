@@ -1,4 +1,4 @@
-import { navItems } from "@/nav-items";
+import { navItems } from "../../nav-items";
 import { Outlet } from "react-router-dom";
 import { DesktopNavbar } from "./_components/DesktopNavbar";
 import { MobileSheet } from "./_components/MobileSheet";
