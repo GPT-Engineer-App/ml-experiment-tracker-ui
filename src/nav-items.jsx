@@ -1,10 +1,11 @@
-import { Home, Database, Beaker, BarChart2, FileText, Activity } from "lucide-react";
+import { Home, Database, Beaker, BarChart2, FileText, Activity, LayoutDashboard } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import Models from "./pages/Models.jsx";
 import Datasets from "./pages/Datasets.jsx";
 import Experiments from "./pages/Experiments.jsx";
 import Results from "./pages/Results.jsx";
 import MLFlowIntegration from "./pages/MLFlowIntegration.jsx";
+import UnifiedDashboard from "./pages/UnifiedDashboard.jsx";
 
 export const navItems = [
   {
@@ -12,6 +13,12 @@ export const navItems = [
     to: "/",
     icon: <Home className="h-4 w-4" />,
     page: <Index />,
+  },
+  {
+    title: "Unified Dashboard",
+    to: "/unified-dashboard",
+    icon: <LayoutDashboard className="h-4 w-4" />,
+    page: <UnifiedDashboard />,
   },
   {
     title: "Models",
