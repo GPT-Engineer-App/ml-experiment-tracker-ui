@@ -1,9 +1,10 @@
-import { Home, Database, Beaker, BarChart2, FileText } from "lucide-react";
+import { Home, Database, Beaker, BarChart2, FileText, Activity } from "lucide-react";
 import Index from "./pages/Index.jsx";
 import Models from "./pages/Models.jsx";
 import Datasets from "./pages/Datasets.jsx";
 import Experiments from "./pages/Experiments.jsx";
 import Results from "./pages/Results.jsx";
+import MLFlowIntegration from "./pages/MLFlowIntegration.jsx";
 
 export const navItems = [
   {
@@ -35,5 +36,11 @@ export const navItems = [
     to: "/results",
     icon: <BarChart2 className="h-4 w-4" />,
     page: <Results />,
+  },
+  {
+    title: "MLFlow Integration",
+    to: "/mlflow",
+    icon: <Activity className="h-4 w-4" />,
+    page: <MLFlowIntegration />,
   },
 ];
